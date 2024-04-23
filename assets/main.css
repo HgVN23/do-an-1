@@ -47,7 +47,7 @@ header {
 		align-items: center;
 	}
 	.table-responsive {
-		height: calc(34px * 8);
+		height: calc(34px * 9);
 		overflow: auto;
 	}
 	.table {

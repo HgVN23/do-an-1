@@ -16,8 +16,8 @@
 	<?php include '../assets/php/header.php'; ?>
 	<div class="d-flex">
 		<?php include '../assets/php/sidebar.php'; ?>
-		<section class="cSec mx-auto my-5 d-flex flex-column gap-4">
-			<div class="bg-white rounded px-2 py-3 d-flex align-items-center gap-2 shadow-sm">
+		<section class="cSec mx-auto mt-5 d-flex flex-column gap-4">
+			<div class="bg-white rounded p-3 d-flex align-items-center gap-2 shadow-sm">
 				<div class="dropdown">
 					<button class="btnDropdown btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Kì</button>
 					<ul class="dropdown-menu">
@@ -69,7 +69,7 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="bg-white rounded px-2 py-3 d-flex justify-content-end align-items-center gap-2 shadow-sm">
+			<div class="bg-white rounded p-3 d-flex justify-content-end align-items-center gap-2 shadow-sm">
 				<button class="btn btn-success">Thêm mới</button>
 				<button class="btn btn-primary">In</button>
 			</div>
