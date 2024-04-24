@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +12,13 @@
 	<!-- CSS/JS -->
 	<link rel="stylesheet" type="text/css" href="../assets/main.css">
 </head>
-
 <body>
 	<?php include '../assets/php/header.php'; ?>
 	<div class="d-flex">
 		<?php include '../assets/php/sidebar.php'; ?>
 		<section class="cSec mx-auto mt-5 d-flex flex-column gap-4">
-			<div class="bg-white">
-				<div class=" rounded p-3 d-flex align-items-center gap-3 shadow-sm w-50">
+			<div class="bg-white rounded shadow-sm">
+				<div class="p-3 d-flex align-items-center gap-3 w-50">
 					<select class="form-select form-select-sm w-25" aria-label="Small select example">
 						<option selected>Kì</option>
 						<option value="1">II (2023 - 2024)</option>
@@ -35,10 +33,9 @@
 					<button class="btn btn-success fw-semibold">Lọc</button>
 				</div>
 			</div>
-
 			<div class="table-responsive shadow-sm">
 				<table class="table">
-					<thead class="sticky-top z-10 test">
+					<thead class="sticky-top">
 						<tr>
 							<th>STT</th>
 							<th>Học phần</th>
@@ -59,28 +56,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
-								</select>
-							</td>
-							<td>
-								<div class="d-flex justify-content-center gap-3">
-									<i class="bi bi-pencil-square"></i>
-									<i class="bi bi-trash3"></i>
-								</div>
-							</td>
-						</tr>
-
-						<tr>
-							<td>Test</td>
-							<td>Test</td>
-							<td>Test</td>
-							<td>Test</td>
-							<td>
-								<select class="form-select form-select-sm" aria-label="Small select example">
-									<option selected>Lựa chọn...</option>
-									<option value="1">Công nghệ</option>
-									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -100,7 +75,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -120,7 +94,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -140,7 +113,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -160,7 +132,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -180,7 +151,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -200,7 +170,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -220,7 +189,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -240,7 +208,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -260,7 +227,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -280,7 +246,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -300,7 +265,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -320,7 +284,6 @@
 									<option selected>Lựa chọn...</option>
 									<option value="1">Công nghệ</option>
 									<option value="2">Kinh tế</option>
-
 								</select>
 							</td>
 							<td>
@@ -330,7 +293,120 @@
 								</div>
 							</td>
 						</tr>
-
+						<tr>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>
+								<select class="form-select form-select-sm" aria-label="Small select example">
+									<option selected>Lựa chọn...</option>
+									<option value="1">Công nghệ</option>
+									<option value="2">Kinh tế</option>
+								</select>
+							</td>
+							<td>
+								<div class="d-flex justify-content-center gap-3">
+									<i class="bi bi-pencil-square"></i>
+									<i class="bi bi-trash3"></i>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>
+								<select class="form-select form-select-sm" aria-label="Small select example">
+									<option selected>Lựa chọn...</option>
+									<option value="1">Công nghệ</option>
+									<option value="2">Kinh tế</option>
+								</select>
+							</td>
+							<td>
+								<div class="d-flex justify-content-center gap-3">
+									<i class="bi bi-pencil-square"></i>
+									<i class="bi bi-trash3"></i>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>
+								<select class="form-select form-select-sm" aria-label="Small select example">
+									<option selected>Lựa chọn...</option>
+									<option value="1">Công nghệ</option>
+									<option value="2">Kinh tế</option>
+								</select>
+							</td>
+							<td>
+								<div class="d-flex justify-content-center gap-3">
+									<i class="bi bi-pencil-square"></i>
+									<i class="bi bi-trash3"></i>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>
+								<select class="form-select form-select-sm" aria-label="Small select example">
+									<option selected>Lựa chọn...</option>
+									<option value="1">Công nghệ</option>
+									<option value="2">Kinh tế</option>
+								</select>
+							</td>
+							<td>
+								<div class="d-flex justify-content-center gap-3">
+									<i class="bi bi-pencil-square"></i>
+									<i class="bi bi-trash3"></i>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>
+								<select class="form-select form-select-sm" aria-label="Small select example">
+									<option selected>Lựa chọn...</option>
+									<option value="1">Công nghệ</option>
+									<option value="2">Kinh tế</option>
+								</select>
+							</td>
+							<td>
+								<div class="d-flex justify-content-center gap-3">
+									<i class="bi bi-pencil-square"></i>
+									<i class="bi bi-trash3"></i>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+							<td>
+								<select class="form-select form-select-sm" aria-label="Small select example">
+									<option selected>Lựa chọn...</option>
+									<option value="1">Công nghệ</option>
+									<option value="2">Kinh tế</option>
+								</select>
+							</td>
+							<td>
+								<div class="d-flex justify-content-center gap-3">
+									<i class="bi bi-pencil-square"></i>
+									<i class="bi bi-trash3"></i>
+								</div>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
