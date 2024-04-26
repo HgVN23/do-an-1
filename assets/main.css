@@ -43,8 +43,13 @@ header {
 	}
 
 	.table-responsive {
-		height: calc(36px * 9);
 		overflow: auto;
+	}
+	.table-responsive.type1 {
+		height: calc(36px * 9);
+	}
+	.table-responsive.type2 {
+		height: calc(36px * 11);
 	}
 	.table {
 		border: 1px solid #b4b0b0;
