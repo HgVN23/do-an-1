@@ -1,150 +1,263 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 * {
-  /*outline: 1px solid blue;*/
-  /*user-select: none;*/
-  -webkit-user-drag: none;
+	/*outline: 1px solid blue;*/
+	/*user-select: none;*/
+	-webkit-user-drag: none;
 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background: #e7ecf0;
-  color: #373737;
+	background: #e7ecf0;
+	color: #373737;
 }
 header {
-  box-shadow: 0 3px 0.3rem lightgrey;
-  z-index: 100;
-  height: 50px;
+	box-shadow: 0 3px 0.3rem lightgrey;
+	z-index: 100;
+	height: 50px;
 
-  .logo {
-    background: lightgrey;
-    width: 35px;
-    height: 35px;
-  }
+	.logo {
+		background: lightgrey;
+		width: 35px;
+		height: 35px;
+	}
 }
 
 .cSec {
-  /* width: 140vh; */
-  width: calc(100% - 220px - 100px);
-  font-size: 14px;
+	/* width: 140vh; */
+	width: calc(100% - 220px - 100px);
+	font-size: 14px;
 
-  .btn {
-    min-width: 7rem;
-    padding: 0.2rem 0.3rem;
-  }
+	.btn {
+		min-width: 7rem;
+		padding: 0.2rem 0.3rem;
+	}
 
-  .table-responsive {
-    overflow: auto;
-  }
-  .table-responsive.type1 {
-    height: calc(36px * 9);
-  }
-  .table-responsive.type2 {
-    height: calc(36px * 11);
-  }
-  .table {
-    border: 1px solid #b4b0b0;
-    border-top: none;
-    border-left: none;
-    margin-bottom: 0;
+	.txtInfo {
+		::before {
+			font-weight: bold;
+		}
+		#txtMaSV::before {
+			content: 'Mã sinh viên: ';
+		}
+		#txtMaGV::before {
+			content: 'Mã giảng viên: ';
+		}
+		#txtHoTen::before {
+			content: 'Họ và Tên: ';
+		}
+		#txtGioiTinh::before {
+			content: 'Giới tính: ';
+		}
+		#txtNgaySinh::before {
+			content: 'Ngày sinh: ';
+		}
+		#txtKhoa::before {
+			content: 'Khoa: ';
+		}
+	}
 
-    th,
-    td {
-      border: 1px solid #b4b0b0;
-      border-bottom: none;
-      border-right: none;
-      padding: 6px 12px;
-      white-space: nowrap;
-      vertical-align: middle;
-    }
-    td .form-select {
-      padding-top: 0.05rem;
-      padding-bottom: 0.05rem;
-    }
-    thead {
-      height: 36px;
-      box-shadow: inset 0 1px #b4b0b0;
-    }
-    th {
-      background-color: #f3f7f9;
-      color: #1da1f2;
-      text-align: center;
-      box-shadow: inset 0 -0.4px #b4b0b0;
-    }
-    .btnDropdown {
-      width: 100%;
-      height: 1.3rem;
-    }
-    i {
-      cursor: pointer;
-    }
-  }
+	.table-responsive {
+		overflow: auto;
+	}
+	.table-responsive.type1 {
+		height: calc(36px * 9);
+	}
+	.table-responsive.type2 {
+		height: calc(36px * 11);
+	}
+	.table {
+		border: 1px solid #b4b0b0;
+		border-top: none;
+		border-left: none;
+		margin-bottom: 0;
+		font-size: 12px;
+
+		th,
+		td {
+			border: 1px solid #b4b0b0;
+			border-bottom: none;
+			border-right: none;
+			padding: 6px 12px;
+			white-space: nowrap;
+			vertical-align: middle;
+		}
+		td .form-select {
+			padding-top: 0.05rem;
+			padding-bottom: 0.05rem;
+		}
+		thead {
+			height: 36px;
+			box-shadow: inset 0 1px #b4b0b0;
+		}
+		th {
+			background-color: #f3f7f9;
+			color: #1da1f2;
+			text-align: center;
+			box-shadow: inset 0 -0.4px #b4b0b0;
+		}
+		.btnDropdown {
+			width: 100%;
+			height: 1.3rem;
+		}
+		i {
+			cursor: pointer;
+		}
+
+		.tableDropdown {
+			.dHeader {
+				background: #f5f5f5;
+				color: #5d92c0;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			.dHide {
+				display: none;
+			}
+			.dShow {
+				display: table-row;
+			}
+
+			::before {
+				font-weight: bold;
+			}
+			#txt10::before {
+				content: 'Điểm trung bình học kỳ hệ 10: ';
+			}
+			#txt4::before {
+				content: 'Điểm trung bình học kỳ hệ 4: ';
+			}
+			#txtTB1::before {
+				content: 'Điểm trung bình tích lũy: ';
+			}
+			#txtTB2::before {
+				content: 'Điểm trung bình tích lũy (hệ 4): ';
+			}
+			#txtTCDK::before {
+				content: 'Tổng số tín chỉ đã đăng ký: ';
+			}
+			#txtTCTL::before {
+				content: 'Tổng số tín chỉ tích lũy: ';
+			}
+			#txtTCNo::before {
+				content: 'Tổng số tín chỉ nợ tính đến hiện tại: ';
+			}
+			#txtXLTL::before {
+				content: 'Xếp loại học lực tích lũy: ';
+			}
+			#txtXLHK::before {
+				content: 'Xếp loại học lực học kỳ: ';
+			}
+			#txtXLHV::before {
+				content: 'Xử lý học vụ: ';
+			}
+			#txtDiemRL::before {
+				content: 'Điểm rèn luyện';
+			}
+			#txtXepLoai::before {
+				content: 'Xếp loại';
+			}
+		}
+
+		.slotLich {
+			#txtTiet::before {
+				content: 'Tiết: ';
+			}
+			#txtPhong::before {
+				content: 'Phòng: ';
+			}
+			#txtGiangVien::before {
+				content: 'Giảng viên: ';
+			}
+		}
+	}
+	.lichLT {
+		min-width: 16px;
+		min-height: 8px;
+		background: #e7ecf0;
+		border: 1px solid #b4b0b0;
+	}
+	.lichTH {
+		min-width: 16px;
+		min-height: 8px;
+		background: #71cb35;
+		border: 1px solid #b4b0b0;
+	}
+	.lichThi {
+		min-width: 16px;
+		min-height: 8px;
+		background: #92d6ff;
+		border: 1px solid #b4b0b0;
+	}
 }
 
-#sidebar {
-  min-width: 220px;
-  height: calc(100vh - 50px);
-  box-shadow: 3px 0 0.3rem lightgrey;
-  transition: all 0.25s ease-in-out;
-  /* background-color: #0e2238; */
-  background-color: #f8f8ff;
-  display: flex;
-  flex-direction: column;
 
-  .here {
-    background-color: rgba(128, 128, 128, 0.225);
-    border-left: 3px solid #3b7ddd;
-  }
+
+/*Side bar*/
+#sidebar {
+	min-width: 220px;
+	height: calc(100vh - 50px);
+	box-shadow: 3px 0 0.3rem lightgrey;
+	transition: all 0.25s ease-in-out;
+	/* background-color: #0e2238; */
+	background-color: #f8f8ff;
+	display: flex;
+	flex-direction: column;
+
+	.here {
+		background-color: rgba(128, 128, 128, 0.225);
+		border-left: 3px solid #3b7ddd;
+	}
 }
 
 #sidebar.expand {
-  width: 220px;
-  min-width: 220px;
+	width: 220px;
+	min-width: 220px;
 }
 
 .sidebar-nav {
-  padding: 2rem 0;
-  flex: 1 1 auto;
+	padding: 2rem 0;
+	flex: 1 1 auto;
 }
 
 div.sidebar-link,
 a.sidebar-link {
-  /*padding: 0.625rem 1.625rem;*/
-  color: #000;
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 500;
-  white-space: nowrap;
-  border-left: 3px solid transparent;
-  text-decoration: none;
+	/*padding: 0.625rem 1.625rem;*/
+	color: #000;
+	display: block;
+	font-size: 0.9rem;
+	font-weight: 500;
+	white-space: nowrap;
+	border-left: 3px solid transparent;
+	text-decoration: none;
 }
 
 div.sidebar-link:hover,
 a.sidebar-link:hover {
-  background-color: rgba(255, 255, 255, 0.075);
-  border-left: 3px solid #3b7ddd;
+	background-color: rgba(255, 255, 255, 0.075);
+	border-left: 3px solid #3b7ddd;
 }
 
 .sidebar-item {
-  position: relative;
+	position: relative;
 }
 
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
-  border: solid;
-  border-width: 0 0.075rem 0.075rem 0;
-  content: "";
-  display: inline-block;
-  padding: 2px;
-  position: absolute;
-  right: 1.5rem;
-  top: 1.25rem;
-  transform: rotate(-135deg);
-  transition: all 0.2s ease-out;
+	border: solid;
+	border-width: 0 0.075rem 0.075rem 0;
+	content: "";
+	display: inline-block;
+	padding: 2px;
+	position: absolute;
+	right: 1.5rem;
+	top: 1.25rem;
+	transform: rotate(-135deg);
+	transition: all 0.2s ease-out;
 }
 
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
-  transform: rotate(45deg);
-  transition: all 0.2s ease-out;
+	transform: rotate(45deg);
+	transition: all 0.2s ease-out;
 }
