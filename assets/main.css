@@ -25,6 +25,28 @@ header {
 	}
 }
 
+.loginBg {
+	background: #f9fafc!important;
+
+	.loginPlace {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	input[type="text"] {
+		background: #eef2f5;
+		font-size: 14px;
+	}
+	input[type="text"]::placeholder,
+	.remember,
+	.forgot {
+		color: #b2b2b2;
+		font-size: 14px;
+		font-weight: bold;
+	}
+}
+
 .cSec {
 	/* width: 140vh; */
 	width: calc(100% - 220px - 100px);
