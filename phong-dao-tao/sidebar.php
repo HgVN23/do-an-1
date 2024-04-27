@@ -1,12 +1,44 @@
-<div class="sidebar bg-white py-4 d-flex flex-column gap-2">
-	<a class="link-dark link-underline-opacity-0 fw-semibold px-3" href="chuong-trinh-khung.php">Chương trình khung</a>
-	<!-- Cần làm dropdown menu -->
-	<div class="fw-semibold px-3 fst-italic">Quản lý lớp danh nghĩa</div>
-	<a class="link-dark link-underline-opacity-0 fw-semibold ms-3 px-3" href="quan-ly-lop.php">Quản lý lớp</a>
-	<a class="link-dark link-underline-opacity-0 fw-semibold ms-3 px-3" href="quan-ly-sinh-vien-trong-lop.php">Quản lý sinh viên trong lớp</a>
-	<!--  -->
-	<a class="link-dark link-underline-opacity-0 fw-semibold px-3" href="lich-theo-tien-do.php">Lịch theo tiến độ</a>
-	<a class="link-dark link-underline-opacity-0 fw-semibold px-3" href="diem-ren-luyen.php">Điểm rèn luyện</a>
-	<a class="link-dark link-underline-opacity-0 fw-semibold px-3" href="diem-thi.php">Điểm thi</a>
-	<a class="link-dark link-underline-opacity-0 fw-semibold px-3" href="diem-qua-trinh.php">Điểm quá trình</a>
-</div>
+<aside id="sidebar" class="expand">
+	<ul class="sidebar-nav">
+		<li class="sidebar-item">
+			<a href="chuong-trinh-khung.php" class="sidebar-link">
+				<span>Chương trình khung</span>
+			</a>
+		</li>
+
+		<li class="sidebar-item">
+			<a href="" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#dropdows">
+				<span>Quản lý lớp danh nghĩa</span>
+			</a>
+			<ul id="dropdows" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+				<li class="sidebar-item">
+					<a href="quan-ly-lop.php" class="sidebar-link">Quản lý lớp</a>
+				</li>
+				<li class="sidebar-item">
+					<a href="quan-ly-sinh-vien-trong-lop.php" class="sidebar-link">Quản lý sinh viên trong lớp</a>
+				</li>
+			</ul>
+		</li>
+		<li class="sidebar-item">
+			<a href="lich-theo-tien-do.php" class="sidebar-link">
+				<span>Lịch theo tiến độ</span>
+			</a>
+		</li>
+
+		<li class="sidebar-item">
+			<a href="diem-ren-luyen.php" class="sidebar-link">
+				<span>Điểm rèn luyện</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a href="diem-thi.php" class="sidebar-link">
+				<span>Điểm thi</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a href="diem-qua-trinh.php" class="sidebar-link">
+				<span>Điểm quá trình</span>
+			</a>
+		</li>
+	</ul>
+</aside>
