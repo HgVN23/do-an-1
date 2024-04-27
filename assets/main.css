@@ -109,8 +109,9 @@ header {
   flex: 1 1 auto;
 }
 
+div.sidebar-link,
 a.sidebar-link {
-  padding: 0.625rem 1.625rem;
+  /*padding: 0.625rem 1.625rem;*/
   color: #000;
   display: block;
   font-size: 0.9rem;
@@ -120,6 +121,7 @@ a.sidebar-link {
   text-decoration: none;
 }
 
+div.sidebar-link:hover,
 a.sidebar-link:hover {
   background-color: rgba(255, 255, 255, 0.075);
   border-left: 3px solid #3b7ddd;
