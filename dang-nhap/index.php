@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,13 +14,17 @@
 	<link rel="stylesheet" type="text/css" href="../assets/main.css">
 	<script type="text/javascript" src="../assets/js/main.js" defer></script>
 </head>
+
 <body class="loginBg">
 	<div class="loginPlace w-100 d-flex justify-content-center align-items-center gap-5">
 		<img src="../assets/img/login.png" width="400" height="400">
 		<form class="w-25" method="POST">
 			<h1>Đăng Nhập</h1>
-			<input class="w-100 border-0 rounded-top px-2 py-3" type="text" name="user" placeholder="Người dùng"><br>
-			<input class="w-100 border-0 rounded-bottom px-2 py-3" type="text" name="password" placeholder="Mật khẩu"><br>
+			<div class="rounded p-1" style="background-color: #e6e8eb8f">
+				<input class="w-100 border-0 rounded px-2 py-3" type="text" name="user" placeholder="Người dùng">
+				<span class="d-block w-100" style="padding:0.125rem 0; background-color: #e6e8eb8f;"></span>
+				<input class="w-100 border-0 rounded px-2 py-3" type="text" name="password" placeholder="Mật khẩu">
+			</div>
 			<div class="my-4 d-flex justify-content-between align-items-center gap-1">
 				<input class="form-check-input" type="checkbox" name="remember" id="remember">
 				<label class="remember fw-bold text-nowrap" for="remember">Ghi nhớ tài khoản</label>
@@ -29,4 +34,5 @@
 		</form>
 	</div>
 </body>
+
 </html>
