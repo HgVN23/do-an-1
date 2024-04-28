@@ -81,6 +81,18 @@ header {
       cursor: pointer;
     }
   }
+
+  .inputfile-label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+
+    i {
+      font-size: 14px;
+    }
+  }
 }
 
 #sidebar {
