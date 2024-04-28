@@ -25,6 +25,28 @@ header {
   }
 }
 
+.loginBg {
+  background: #f9fafc !important;
+
+  .loginPlace {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  input[type="text"] {
+    background: #eef2f5;
+    font-size: 14px;
+  }
+  input[type="text"]::placeholder,
+  .remember,
+  .forgot {
+    color: #b2b2b2;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
 .cSec {
   /* width: 140vh; */
   width: calc(100% - 220px - 100px);
@@ -33,6 +55,30 @@ header {
   .btn {
     min-width: 7rem;
     padding: 0.2rem 0.3rem;
+  }
+
+  .txtInfo {
+    ::before {
+      font-weight: bold;
+    }
+    #txtMaSV::before {
+      content: "Mã sinh viên: ";
+    }
+    #txtMaGV::before {
+      content: "Mã giảng viên: ";
+    }
+    #txtHoTen::before {
+      content: "Họ và Tên: ";
+    }
+    #txtGioiTinh::before {
+      content: "Giới tính: ";
+    }
+    #txtNgaySinh::before {
+      content: "Ngày sinh: ";
+    }
+    #txtKhoa::before {
+      content: "Khoa: ";
+    }
   }
 
   .table-responsive {
@@ -49,6 +95,7 @@ header {
     border-top: none;
     border-left: none;
     margin-bottom: 0;
+    font-size: 12px;
 
     th,
     td {
@@ -79,18 +126,6 @@ header {
     }
     i {
       cursor: pointer;
-    }
-  }
-
-  .inputfile-label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    display: inline-block;
-    cursor: pointer;
-
-    i {
-      font-size: 14px;
     }
   }
 }

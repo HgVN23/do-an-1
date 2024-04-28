@@ -1,4 +1,14 @@
-<div class="sidebar bg-white py-4 d-flex flex-column gap-2">
-	<a class="link-dark link-underline-opacity-0 fw-semibold px-3" href="chuong-trinh-khung.php">Chương trình khung</a>
-	<a class="link-dark link-underline-opacity-0 fw-semibold px-3" href="danh-sach-giang-vien.php">Danh sách giảng viên</a>
-</div>
+<aside id="sidebar" class="expand">
+	<ul class="sidebar-nav">
+		<li class="sidebar-item">
+			<a class="sidebar-link px-3 py-2" href="chuong-trinh-khung.php">
+				<span>Chương trình khung</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a class="sidebar-link px-3 py-2" href="danh-sach-giang-vien.php">
+				<span>Danh sách giảng viên</span>
+			</a>
+		</li>
+	</ul>
+</aside>
