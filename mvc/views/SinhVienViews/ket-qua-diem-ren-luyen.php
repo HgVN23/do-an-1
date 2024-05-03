@@ -34,15 +34,12 @@
 				<table class="table">
 					<thead class="sticky-top">
 						<tr>
-							<th rowspan="2">STT</th>
-							<th rowspan="2">Mã học phần</th>
-							<th rowspan="2">Tên học phần</th>
-							<th rowspan="2">Số tín chỉ</th>
-							<th colspan="2">Thông tin lịch</th>
-						</tr>
-						<tr>
-							<th>Thứ</th>
-							<th>Tiết</th>
+							<th>STT</th>
+							<th>Ngày vi phạm</th>
+							<th>Nội dung</th>
+							<th>Hình thức</th>
+							<th>Ghi chú</th>
+							<th>Điểm<br>Cộng/Trừ</th>
 						</tr>
 					</thead>
 					<tbody class="tableDropdown">
@@ -54,6 +51,16 @@
 							<td>Test</td>
 							<td>Test</td>
 							<td>Test</td>
+						</tr>
+						<tr class="txtScore dHide dShow">
+							<td id="txtDiemRL" class="text-center" colspan="3"></td>
+							<td>Test</td>
+							<td colspan="2"></td>
+						</tr>
+						<tr class="txtScore dHide dShow">
+							<td id="txtXepLoai" class="text-center" colspan="3"></td>
+							<td>Test</td>
+							<td colspan="2"></td>
 						</tr>
 					</tbody>
 				</table>
