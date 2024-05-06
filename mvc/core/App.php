@@ -25,13 +25,8 @@ class App
             unset($arr[1]);
         }
 
-
         // xử lý param 
         $this->params = $arr ? array_values($arr) : [];
-
-        // echo ($this->controller);
-        // echo ($this->action);
-        // print_r($this->params);
         call_user_func_array([new $this->controller, $this->action], $this->params);
     }
 

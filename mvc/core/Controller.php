@@ -10,7 +10,6 @@ class Controller
 
     public function view($pathdir, $fileview, $data = [])
     {
-
         require_once "../mvc/views/" . $pathdir . "/" . $fileview . ".php";
     }
 }
