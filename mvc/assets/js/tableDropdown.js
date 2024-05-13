@@ -1,8 +1,7 @@
 const tBody = document.querySelectorAll("tBody");
+
 tBody.forEach((tB) => {
   tB.children[0].addEventListener("click", function () {
-    // const dActive = document.querySelector(".dActive");
-    // toggleShow(dActive);
     toggleShow(this);
   });
 });

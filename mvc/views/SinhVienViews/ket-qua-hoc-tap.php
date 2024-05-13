@@ -23,65 +23,73 @@
 				<th>TH Hệ số 1</th>
 			</tr>
 		</thead>
-		<tbody class="tableDropdown">
-			<tr class="dClick dActive">
-				<td class="dHeader" colspan="16">Test</td>
-			</tr>
-			<tr class="dHide dShow">
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>
-					<!-- Cần thay đổi -->
-					<div class="d-flex justify-content-center">
-						<i class="bi bi-check-lg"></i>
-					</div>
-					<!--  -->
-				</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>
-					<!-- Cần thay đổi -->
-					<div class="d-flex justify-content-center">
-						<i class="bi bi-check-lg"></i>
-					</div>
-					<!--  -->
-				</td>
-			</tr>
-			<tr class="txtScore dHide dShow">
-				<td id="txt10" colspan="2"></td>
-				<td id="txt4" colspan="2"></td>
-				<td colspan="12"></td>
-			</tr>
-			<tr class="txtScore dHide dShow">
-				<td id="txtTB1" colspan="2"></td>
-				<td id="txtTB2" colspan="2"></td>
-				<td colspan="12"></td>
-			</tr>
-			<tr class="txtScore dHide dShow">
-				<td id="txtTCDK" colspan="2"></td>
-				<td id="txtTCTL" colspan="2"></td>
-				<td colspan="12"></td>
-			</tr>
-			<tr class="txtScore dHide dShow">
-				<td id="txtTCNo" colspan="2"></td>
-				<td id="txtXLTL" colspan="2"></td>
-				<td colspan="12"></td>
-			</tr>
-			<tr class="txtScore dHide dShow">
-				<td id="txtXLHK" colspan="2"></td>
-				<td id="txtXLHV" colspan="2"></td>
-				<td colspan="12"></td>
-			</tr>
-		</tbody>
+
+		<?php
+		$hk = $data["object"]->GetHK();
+		while ($row = mysqli_fetch_array($hk)) {
+		?>
+			<tbody class="tableDropdown">
+				<tr class="dClick dActive">
+					<td class="dHeader" colspan="16"><?php echo ("Học kì " . $row['TenHK'] . " (" . $row['namhoc'] . "-" . $row['namhoc'] + 1 . ")"); ?></td>
+				</tr>
+				<tr class="dHide dShow">
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>
+						<!-- Cần thay đổi -->
+						<div class="d-flex justify-content-center">
+							<i class="bi bi-check-lg"></i>
+						</div>
+						<!--  -->
+					</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>Test</td>
+					<td>
+						<!-- Cần thay đổi -->
+						<div class="d-flex justify-content-center">
+							<i class="bi bi-check-lg"></i>
+						</div>
+						<!--  -->
+					</td>
+				</tr>
+				<tr class="txtScore dHide dShow">
+					<td id="txt10" colspan="2"></td>
+					<td id="txt4" colspan="2"></td>
+					<td colspan="12"></td>
+				</tr>
+				<tr class="txtScore dHide dShow">
+					<td id="txtTB1" colspan="2"></td>
+					<td id="txtTB2" colspan="2"></td>
+					<td colspan="12"></td>
+				</tr>
+				<tr class="txtScore dHide dShow">
+					<td id="txtTCDK" colspan="2"></td>
+					<td id="txtTCTL" colspan="2"></td>
+					<td colspan="12"></td>
+				</tr>
+				<tr class="txtScore dHide dShow">
+					<td id="txtTCNo" colspan="2"></td>
+					<td id="txtXLTL" colspan="2"></td>
+					<td colspan="12"></td>
+				</tr>
+				<tr class="txtScore dHide dShow">
+					<td id="txtXLHK" colspan="2"></td>
+					<td id="txtXLHV" colspan="2"></td>
+					<td colspan="12"></td>
+				</tr>
+			</tbody>
+		<?php
+		}
+		?>
 	</table>
 </div>

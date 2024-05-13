@@ -7,17 +7,25 @@
 	<title>Trang Sinh viên</title>
 
 	<!-- Bootstrap 5 -->
+	<link rel="stylesheet" href="/do-an-1/mvc/assets/butstrap.css">
 	<link rel="stylesheet" href="/do-an-1/mvc/assets/bootstrap.min.css">
 	<script type="text/javascript" src="/do-an-1/mvc/assets/js/bootstrap.bundle.min.js"></script>
 
 	<!-- CSS/JS -->
 	<link rel="stylesheet" type="text/css" href="/do-an-1/mvc/assets/main.css">
-	<script type="text/javascript" src="/do-an-1/mvc/assets/js/main.js" defer></script>
 	<script type="text/javascript" src="/do-an-1/mvc/assets/js/tableDropdown.js" defer></script>
+	<script type="text/javascript" src="/do-an-1/mvc/assets/js/jquery-2.2.3.min.js" defer></script>
+	<script type="text/javascript" src="/do-an-1/mvc/assets/js/butstrap.js" defer></script>
+	<script type="text/javascript" src="/do-an-1/mvc/assets/js/handelform.js" defer></script>
+	<script type="text/javascript" src="/do-an-1/mvc/assets/js/main.js" defer></script>
+
 </head>
 
-<body>
+<body class="position-relative">
+
+
 	<?php
+
 	include './assets/php/header.php';
 	?>
 	<div class="d-flex">
@@ -28,7 +36,17 @@
 			?>
 
 		</section>
+
 	</div>
+	<?php
+	// Modal
+	include './assets/php/modal-changepass.php';
+	// Toast
+	include './assets/php/toastpass.php';
+	?>
+
+
+
 </body>
 
 </html>

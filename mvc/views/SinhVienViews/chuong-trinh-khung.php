@@ -13,18 +13,27 @@
                 <th>Tiết</th>
             </tr>
         </thead>
-        <tbody class="tableDropdown">
-            <tr class="dClick dActive">
-                <td class="dHeader" colspan="16">Test</td>
-            </tr>
-            <tr class="dHide dShow">
-                <td>Test</td>
-                <td>Test</td>
-                <td>Test</td>
-                <td>Test</td>
-                <td>Test</td>
-                <td>Test</td>
-            </tr>
-        </tbody>
+
+
+        <?php
+        $hk = $data["object"]->GetHK();
+        while ($row = mysqli_fetch_array($hk)) {
+        ?><tbody class="tableDropdown">
+                <tr class="dClick dActive">
+                    <td class="dHeader" colspan="16"><?php echo ("Học kì " . $row['TenHK'] . " (" . $row['namhoc'] . "-" . $row['namhoc'] + 1 . ")"); ?></td>
+                </tr>
+                <tr class="dHide dShow">
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+            </tbody>
+        <?php
+        }
+        ?>
+
     </table>
 </div>

@@ -12,9 +12,21 @@ class UserLogin extends DB
         if (empty($Username) || empty($Password)) {
             $alert = "Tên đăng nhập và mật khẩu không được để trống";
         } else {
-            $query = "SELECT * FROM nguoidung WHERE Username = '$Username' And Password = md5('$Password')";
+            $query = "SELECT * FROM nguoidung WHERE Username = '$Username' and nguoidung.`Password` = md5('$Password')";
             $result = $this->select($query);
             if ($result) {
+                $value = $result->fetch_assoc();
+                Session::Set("dangnhap", true);
+                Session::Set("userid", $value['ID']);
+                Session::Set("username", $value['Username']);
+                Session::Set("role", $value['Role']);
+
+                setcookie("userid",  $value['ID'], time() + (86400 * 30), "/");
+
+                header('location: trang-chu');
+            } else {
+                $alert = "Tên đăng nhập hoặc mật khẩu không đúng";
+                return $alert;
             }
         }
     }

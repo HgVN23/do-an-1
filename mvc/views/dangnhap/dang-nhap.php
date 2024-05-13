@@ -1,6 +1,8 @@
 <?php
 include '../mvc/core/UserLogin.php';
 $UserLogin = new UserLogin();
+// Session::destroy();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$Username = $_POST['user'];
 	$Password = $_POST['password'];
@@ -39,6 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				<span class="forgot ms-auto fw-bold text-nowrap">Quên mật khẩu</span><br>
 			</div>
 			<button class="btn btn-primary w-100 fw-bold" type="submit">Đăng nhập</button>
+
+			<div>
+				<?php
+				if (isset($LoginCheck)) {
+					echo ($LoginCheck);
+				}
+				?>
+			</div>
 		</form>
 	</div>
 </body>

@@ -22,6 +22,18 @@ header {
     background: lightgrey;
     width: 35px;
     height: 35px;
+    border: 1px solid rgb(0, 42, 255);
+    position: relative;
+  }
+
+  .logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 999px;
+    width: 34px;
+    height: 34px;
   }
 }
 
@@ -280,4 +292,33 @@ a.sidebar-link:hover {
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
   transform: rotate(45deg);
   transition: all 0.2s ease-out;
+}
+
+/* MODAL */
+.modal-content {
+  width: calc(100% - 200px);
+  margin: 0 auto;
+}
+
+.formchangepass label {
+  margin: auto 0;
+}
+
+.error {
+  font-size: 11px;
+  color: red;
+  margin-left: 33.333333%;
+  /* margin-top: -10px; */
+}
+
+.size10px {
+  display: block;
+  width: 15px;
+  height: 15px;
+  z-index: 99999;
+}
+
+.toast {
+  top: 60px;
+  right: 10px;
 }

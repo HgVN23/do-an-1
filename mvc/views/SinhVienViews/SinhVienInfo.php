@@ -1,9 +1,9 @@
 <div class="txtInfo bg-white p-3 d-flex justify-content-between rounded shadow-sm">
     <?php
+    $sv = $data["object"]->GetSV();
     // Đặt con trỏ về vị trí đầu tiên của kết quả
-    mysqli_data_seek($data["sinhvien"], 0);
-
-    while ($row = mysqli_fetch_array($data["sinhvien"])) {
+    mysqli_data_seek($sv, 0);
+    while ($row = mysqli_fetch_array($sv)) {
     ?>
 
         <div class="d-flex flex-column gap-1 w-50">
