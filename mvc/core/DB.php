@@ -15,6 +15,12 @@ class DB
         mysqli_set_charset($this->conn, 'utf8');
     }
 
+    public function query($query)
+    {
+        $result = mysqli_query($this->conn, $query) or die(mysqli_error($this->conn));
+        return $result;
+    }
+
     public function select($query)
     {
         $result = mysqli_query($this->conn, $query) or die(mysqli_error($this->conn));

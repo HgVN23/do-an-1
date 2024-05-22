@@ -12,10 +12,12 @@
 
     <!-- CSS/JS -->
     <link rel="stylesheet" type="text/css" href="/do-an-1/mvc/assets/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.0/xlsx.full.min.js" integrity="sha512-0aL+eiYGMyJYhr5BJL3jqKkgn2Jn+N80M+WbKJpHRelUVHNo7NWQbVUfZK6xpRgFl8/5imYahJpCPXd6yaIhag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="/do-an-1/mvc/assets/js/jquery-2.2.3.min.js" defer></script>
     <script type="text/javascript" src="/do-an-1/mvc/assets/js/tableDropdown.js" defer></script>
     <script type="text/javascript" src="/do-an-1/mvc/assets/js/handelform.js" defer></script>
     <script type="text/javascript" src="/do-an-1/mvc/assets/js/main.js" defer></script>
+
 </head>
 
 <body>
@@ -34,7 +36,22 @@
     include './assets/php/modal-changepass.php';
     // Toast
     include './assets/php/toastpass.php';
+    include './assets/php/modalEdit.php';
+    include './assets/php/modalThem.php';
     ?>
+
+
 </body>
 
 </html>
+
+
+<?php
+
+// if (isset($_SESSION['selectValue1'])) {
+//     Session::unset('selectValue1');
+// }
+// if (isset($_SESSION['selectValue2'])) {
+//     Session::unset('selectValue2');
+// }
+?>

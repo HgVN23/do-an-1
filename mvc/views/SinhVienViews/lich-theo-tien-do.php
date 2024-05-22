@@ -18,19 +18,45 @@
 				<th>Kết thúc</th>
 			</tr>
 		</thead>
-		<tbody>
-			<tr>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-				<td>Test</td>
-			</tr>
-		</tbody>
+
+		<?php
+		$hk = $data["object"]->GetHK();
+		while ($row = mysqli_fetch_array($hk)) {
+			$mahk = $row['MaHK'];
+		?>
+			<tbody class="tableDropdown">
+				<tr class="dClick dActive">
+					<td class="dHeader" colspan="16"><?php
+														if ($row['TenHK'] == "I")
+															echo ($row['TenHK'] . " (" . $row['namhoc'] . "-" . $row['namhoc'] + 1 . ")");
+														else
+															echo ($row['TenHK'] . " (" . $row['namhoc'] - 1 . "-" . $row['namhoc'] . ")");
+														?></td>
+				</tr>
+				<?php
+				$ltd = $data["object"]->GetLichTTD($mahk);
+				$i = 1;
+				while ($rowlttd = mysqli_fetch_array($ltd)) {
+				?>
+					<tr class="dHide dShow">
+						<td align="center"><?php echo ($i) ?></td>
+						<td align="center"><?php echo ($rowlttd['MaHP']) ?></td>
+						<td><?php echo ($rowlttd['TenHP']) ?></td>
+						<td align="center"><?php echo ($rowlttd['SoTC']) ?></td>
+						<td align="center"><?php echo ($rowlttd['Thu']) ?></td>
+						<td align="center"><?php echo ($rowlttd['Tiet']) ?></td>
+						<td></td>
+						<td></td>
+						<td align="center"><?php echo ($rowlttd['MaGV']) ?></td>
+						<td><?php echo ($rowlttd['HoTen']) ?></td>
+					</tr>
+				<?php
+					$i++;
+				}
+				?>
+			</tbody>
+		<?php
+		}
+		?>
 	</table>
 </div>

@@ -2,6 +2,13 @@
 if (isset($_GET['action']) && $_GET['action'] == 'logout') {
 	Session::destroy();
 	setcookie("userid", "", time() - 3600);
+
+
+	foreach ($_SESSION as $key => $value) {
+		if (strpos($key, 'selectValue') == 0) {
+			Session::unset(($key));
+		}
+	}
 }
 ?>
 <header class="bg-white px-5 py-2 d-flex flex-wrap justify-content-between align-items-center gap-2 position-sticky top-0">

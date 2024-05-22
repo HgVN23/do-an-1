@@ -3,6 +3,7 @@ class UserLogin extends DB
 {
     function InfoLogin($user, $password)
     {
+
         $Username = trim($user);
         $Password = trim($password);
 
@@ -12,6 +13,7 @@ class UserLogin extends DB
         if (empty($Username) || empty($Password)) {
             $alert = "Tên đăng nhập và mật khẩu không được để trống";
         } else {
+
             $query = "SELECT * FROM nguoidung WHERE Username = '$Username' and nguoidung.`Password` = md5('$Password')";
             $result = $this->select($query);
             if ($result) {
@@ -20,7 +22,6 @@ class UserLogin extends DB
                 Session::Set("userid", $value['ID']);
                 Session::Set("username", $value['Username']);
                 Session::Set("role", $value['Role']);
-
                 setcookie("userid",  $value['ID'], time() + (86400 * 30), "/");
 
                 header('location: trang-chu');

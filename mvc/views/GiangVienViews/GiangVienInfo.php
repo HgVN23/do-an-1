@@ -18,20 +18,24 @@
         <?php }
     } else { ?>
         <div class="d-flex align-items-center gap-3 w-50">
-            <select class="form-select form-select-sm w-25" aria-label="Small select example">
+            <select class="form-select-mon form-select select-filter form-select-sm w-25" aria-label="Small select example">
                 <option selected>Môn</option>
-                <option value="1">Lập trình</option>
-                <option value="2">Quản trị</option>
+                <?php
+                $monday = $data["object"]->GetMonDay();
+                while ($rowmonday = mysqli_fetch_array($monday)) {
+                    echo "<option value='{$rowmonday['MaHP']}'>{$rowmonday['TenHP']}</option>";
+                }
+                ?>
+
+
             </select>
-            <select class="form-select form-select-sm w-25" aria-label="Small select example">
+            <select class="form-select-lophoc form-select select-filter form-select-sm w-25" aria-label="Small select example">
                 <option selected>Lớp</option>
-                <option value="1">DHTI15A7HN</option>
-                <option value="2">DHTI15A8HN</option>
             </select>
-            <button class="btn btn-success fw-semibold">Lọc</button>
+            <button class="btn-filter btn btn-success fw-semibold">Lọc</button>
         </div>
         <div class="d-flex align-items-center justify-content-end gap-3 w-50">
-            <button class="btn btn-success fw-semibold">Chỉnh sửa</button>
+            <button class="btn-updateQT btn btn-primary fw-semibold">Cập nhật TBQT</button>
             <button class="btn btn-primary fw-semibold">Lưu</button>
         </div>
     <?php }

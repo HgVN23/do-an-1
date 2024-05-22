@@ -1,9 +1,10 @@
 const tBody = document.querySelectorAll("tBody");
 
 tBody.forEach((tB) => {
-  tB.children[0].addEventListener("click", function () {
-    toggleShow(this);
-  });
+  tB.children[0] &&
+    tB.children[0].addEventListener("click", function () {
+      toggleShow(this);
+    });
 });
 
 function toggleShow(tDropdown) {
@@ -13,3 +14,7 @@ function toggleShow(tDropdown) {
     list[i].classList.toggle("dShow");
   }
 }
+
+tBody.forEach((tB) => {
+  tB.children[0] && tB.children[0].click();
+});

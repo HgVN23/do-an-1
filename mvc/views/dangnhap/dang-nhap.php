@@ -1,7 +1,6 @@
 <?php
 include '../mvc/core/UserLogin.php';
 $UserLogin = new UserLogin();
-// Session::destroy();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$Username = $_POST['user'];

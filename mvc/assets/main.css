@@ -175,9 +175,9 @@ header {
       #txtTCTL::before {
         content: "Tổng số tín chỉ tích lũy: ";
       }
-      #txtTCNo::before {
+      /* #txtTCNo::before {
         content: "Tổng số tín chỉ nợ tính đến hiện tại: ";
-      }
+      } */
       #txtXLTL::before {
         content: "Xếp loại học lực tích lũy: ";
       }

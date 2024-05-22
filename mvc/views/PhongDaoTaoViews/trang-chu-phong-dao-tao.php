@@ -12,8 +12,10 @@
 
     <!-- CSS/JS -->
     <link rel="stylesheet" type="text/css" href="/do-an-1/mvc/assets/main.css">
-    <script type="text/javascript" src="/do-an-1/mvc/assets/js/main.js" defer></script>
+    <script type="text/javascript" src="/do-an-1/mvc/assets/js/jquery-2.2.3.min.js" defer></script>
     <script type="text/javascript" src="/do-an-1/mvc/assets/js/tableDropdown.js" defer></script>
+    <script type="text/javascript" src="/do-an-1/mvc/assets/js/handelform.js" defer></script>
+    <script type="text/javascript" src="/do-an-1/mvc/assets/js/main.js" defer></script>
 </head>
 
 <body>
@@ -31,6 +33,7 @@
     include './assets/php/modal-changepass.php';
     // Toast
     include './assets/php/toastpass.php';
+    include './assets/php/modalThem.php';
     ?>
 </body>
 

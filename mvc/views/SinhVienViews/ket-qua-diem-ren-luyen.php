@@ -13,29 +13,45 @@
 		<?php
 		$hk = $data["object"]->GetHK();
 		while ($row = mysqli_fetch_array($hk)) {
+			$mahk = $row['MaHK'];
 		?>
 			<tbody class="tableDropdown">
 				<tr class="dClick dActive">
-					<td class="dHeader" colspan="16"><?php echo ("Học kì " . $row['TenHK'] . " (" . $row['namhoc'] . "-" . $row['namhoc'] + 1 . ")"); ?></td>
+					<td class="dHeader" colspan="16"><?php
+														if ($row['TenHK'] == "I")
+															echo ($row['TenHK'] . " (" . $row['namhoc'] . "-" . $row['namhoc'] + 1 . ")");
+														else
+															echo ($row['TenHK'] . " (" . $row['namhoc'] - 1 . "-" . $row['namhoc'] . ")");
+														?></td>
 				</tr>
-				<tr class="dHide dShow">
-					<td>Test</td>
-					<td>Test</td>
-					<td>Test</td>
-					<td>Test</td>
-					<td>Test</td>
-					<td>Test</td>
-				</tr>
-				<tr class="txtScore dHide dShow">
-					<td id="txtDiemRL" class="text-center" colspan="3"></td>
-					<td>Test</td>
-					<td colspan="2"></td>
-				</tr>
-				<tr class="txtScore dHide dShow">
-					<td id="txtXepLoai" class="text-center" colspan="3"></td>
-					<td>Test</td>
-					<td colspan="2"></td>
-				</tr>
+
+				<!-- <tr class="dHide dShow">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr> -->
+				<?php
+				$drl = $data["object"]->GetDRL($mahk);
+				while ($rowdrl = mysqli_fetch_array($drl)) {
+				?>
+					<tr class="txtScore dHide dShow">
+						<td id="txtDiemRL" class="text-center" colspan="3"></td>
+						<td align="center"><?php echo ($rowdrl['DiemRL']) ?></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="txtScore dHide dShow">
+						<td id="txtXepLoai" class="text-center" colspan="3"></td>
+						<td align="center"><?php echo ($rowdrl['xeploai']) ?></td>
+						<td></td>
+						<td></td>
+					</tr>
+				<?php
+				}
+				?>
 			</tbody>
 		<?php
 		}

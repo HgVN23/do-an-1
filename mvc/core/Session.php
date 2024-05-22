@@ -32,4 +32,9 @@ class Session
         session_destroy();
         header("location: dangnhap");
     }
+
+    public static function unset($key)
+    {
+        unset($_SESSION[$key]);
+    }
 }
