@@ -26,7 +26,7 @@ class UserLogin extends DB
 
                 header('location: trang-chu');
             } else {
-                $alert = "Tên đăng nhập hoặc mật khẩu không đúng";
+                $alert = '<p style="color: red">Tên đăng nhập hoặc mật khẩu không đúng</p>';
                 return $alert;
             }
         }

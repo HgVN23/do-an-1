@@ -184,6 +184,7 @@ if (isset($_POST['selectKH'])) {
     while ($row = mysqli_fetch_array($runqr)) {
         $arrlh[] = array($row['MaLop'], $row['TenLop']);
     }
+    print_r(json_encode($arrlh));
     setcookie("lophocs", json_encode($arrlh), time() + (86400 * 30), "/");
 }
 
@@ -225,6 +226,7 @@ if (isset($_POST['btnUpdateTBQT'])) {
     $maD_list = implode(",", $arrMD);
     $maD_list = "'" . $maD_list . "'";
     $strqr = "CALL UpdatediemTBQT($maD_list, ',')";
+    $strqr = "CALL UpdateDiemTKHP($maD_list, ',')";
     $dbcon->query($strqr);
 
     $qrdtkqt = $dbcon->select("SELECT svhk.MaSV, d.DiemTKQT FROM `sinhvienhpdiemhk` AS svhk

@@ -13,7 +13,7 @@
             }
             ?>
         </select>
-        <select class=" select-filter form-select form-select-sm" style="width: 30%;" aria-label="Small select example">
+        <select class="select-filter form-select form-select-sm" style="width: 30%;" aria-label="Small select example">
             <option selected>Kì học</option>
             <?php
             $HKCTK = $data["object"]->GetHKCTK();

@@ -153,11 +153,11 @@
 						<td id="txtXLTL" colspan="2"></td>
 						<td colspan="12"></td>
 					</tr> -->
-						<tr class="txtScore dHide dShow">
+						<!-- <tr class="txtScore dHide dShow">
 							<td id="txtXLHK" colspan="1"></td>
 							<td id="txtXLHV" colspan="1"></td>
 							<td colspan="14"></td>
-						</tr>
+						</tr> -->
 
 					<?php
 					}

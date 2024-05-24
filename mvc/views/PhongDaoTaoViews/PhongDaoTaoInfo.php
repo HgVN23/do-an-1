@@ -1,4 +1,4 @@
-<div class="bg-white p-3 d-flex align-items-center justify-content-between rounded shadow-sm">
+<!-- <div class="bg-white p-3 d-flex align-items-center justify-content-between rounded shadow-sm">
     <div class="d-flex align-items-center gap-3 w-50">
 
         <select class="select-filter form-select form-select-sm w-25" aria-label="Small select example">
@@ -16,4 +16,4 @@
         <button class="btn-add btn btn-primary fw-semibold">Thêm</button>
         <button class="btn btn-primary fw-semibold">In</button>
     </div>
-</div>
+</div> -->

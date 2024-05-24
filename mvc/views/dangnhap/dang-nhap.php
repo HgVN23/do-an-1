@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<div class="rounded p-1" style="background-color: #e6e8eb8f">
 				<input class="w-100 border-0 rounded px-2 py-3" type="text" name="user" placeholder="Người dùng">
 				<span class="d-block w-100" style="padding:0.125rem 0; background-color: #e6e8eb8f;"></span>
-				<input class="w-100 border-0 rounded px-2 py-3" type="text" name="password" placeholder="Mật khẩu">
+				<input class="w-100 border-0 rounded px-2 py-3" type="password" name="password" placeholder="Mật khẩu">
 			</div>
 			<div class="my-4 d-flex justify-content-between align-items-center gap-1">
 				<input class="form-check-input" type="checkbox" name="remember" id="remember">

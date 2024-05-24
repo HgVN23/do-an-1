@@ -89,45 +89,50 @@ function handelformFilter() {
         formdata.append("selectValue" + i, e.value);
       });
 
+      // Array.from(selects).forEach((select) => {
+      //   console.log(select);
+      //   console.log(select.selectedIndex);
+      // });
+
       const checkselect = Array.from(selects).every(
         (e) => e.selectedIndex != 0
       );
 
-      if (checkselect) {
-        $.ajax({
-          type: "post",
-          data: formdata,
-          url: "",
-          processData: false,
-          contentType: false,
-          success: function (response) {
-            // for (var pair of formdata.entries()) {
-            //   console.log(pair[0] + ", " + pair[1]);
-            // }
+      // if (checkselect) {
+      $.ajax({
+        type: "post",
+        data: formdata,
+        url: "",
+        processData: false,
+        contentType: false,
+        success: function (response) {
+          // for (var pair of formdata.entries()) {
+          //   console.log(pair[0] + ", " + pair[1]);
+          // }
 
-            const bodyRegex = /<body[^>]*>((.|[\n\r])*)<\/body>/im;
-            const match = bodyRegex.exec(response);
-            const responseBody = match[1];
-            // const tablebody = document.getElementById("table-body-content");
-            const body = document.createElement("div");
-            body.innerHTML = responseBody;
-            const tablebodycontent = body.querySelector("#table-body-content");
+          const bodyRegex = /<body[^>]*>((.|[\n\r])*)<\/body>/im;
+          const match = bodyRegex.exec(response);
+          const responseBody = match[1];
+          // const tablebody = document.getElementById("table-body-content");
+          const body = document.createElement("div");
+          body.innerHTML = responseBody;
+          const tablebodycontent = body.querySelector("#table-body-content");
 
-            if (tablebodycontent) {
-              tablebody.innerHTML = tablebodycontent.innerHTML;
-              handelformupdate();
-              handelformDelete();
-              handelformselect();
-              if (!filterClicked) {
-                handleBtnUpdateTBQT();
-                filterClicked = true;
-              }
+          if (tablebodycontent) {
+            tablebody.innerHTML = tablebodycontent.innerHTML;
+            handelformupdate();
+            handelformDelete();
+            handelformselect();
+            if (!filterClicked) {
+              handleBtnUpdateTBQT();
+              filterClicked = true;
             }
-          },
-        });
-      } else {
-        tablebody.innerHTML = "";
-      }
+          }
+        },
+      });
+      // } else {
+      //   tablebody.innerHTML = "";
+      // }
     });
 }
 // filter page khoa
@@ -357,14 +362,24 @@ selectNH &&
       processData: false,
       contentType: false,
       success: function (response) {
-        const HKS = JSON.parse(decodeURIComponent(getCookie("hocKys")));
-        $(".form-select-KH option").each(function () {
-          $(this).remove();
-        });
-        $(".form-select-KH").append($("<option>").val("").text("Học Kỳ"));
-        $(".form-select-KH").append($("<option>").val(HKS[0]).text("Học Kì 1"));
-        $(".form-select-KH").append($("<option>").val(HKS[1]).text("Học Kì 2"));
-        handleformselectKiHocCtsv();
+        const cookieHk = getCookie("hocKys");
+
+        if (cookieHk) {
+          const HKS = JSON.parse(decodeURIComponent(cookieHk));
+          console.log("TEST");
+          $(".form-select-KH option").each(function () {
+            $(this).remove();
+          });
+
+          $(".form-select-KH").append($("<option>").val("").text("Học Kỳ"));
+          $(".form-select-KH").append(
+            $("<option>").val(HKS[0]).text("Học Kì 1")
+          );
+          $(".form-select-KH").append(
+            $("<option>").val(HKS[1]).text("Học Kì 2")
+          );
+          handleformselectKiHocCtsv();
+        }
       },
     });
   });
@@ -387,13 +402,18 @@ function handleformselectKiHocCtsv() {
           $(".form-select-lophoc option").each(function () {
             $(this).remove();
           });
-          const lhs = JSON.parse(decodeURIComponent(getCookie("lophocs")));
-          $(".form-select-lophoc").append($("<option>").val("").text("Lớp"));
-          lhs.forEach((element) => {
-            $(".form-select-lophoc").append(
-              $("<option>").val(element[0]).text(element[1])
-            );
-          });
+
+          const cokielhs = getCookie("lophocs");
+          if (cokielhs) {
+            const lhs = JSON.parse(decodeURIComponent(cokielhs));
+
+            $(".form-select-lophoc").append($("<option>").val("").text("Lớp"));
+            lhs.forEach((element) => {
+              $(".form-select-lophoc").append(
+                $("<option>").val(element[0]).text(element[1])
+              );
+            });
+          }
         },
       });
     });
