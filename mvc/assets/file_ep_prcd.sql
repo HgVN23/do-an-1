@@ -57,7 +57,7 @@ JOIN sinhvien as sv ON sv.MaSV=kqsv.Masv and sv.ID=ID
 SET kq.TongSTCDK=TongTCDKY, KQ.SoTCHK=TongTC, KQ.DiemTBTLH10=KQtbtlh10, KQ.DiemTBTLH4=KQtbtlh4 WHERE kq.MaHK=MaHK; 
 END
 
--- 	UpdateTBDTKH410 V2 THAY ID BẰNG MASV
+-- UpdateTBDTKH410 V2 THAY ID BẰNG MASV
 -- DELIMITER $$
 -- CREATE DEFINER=`` PROCEDURE `UpdateTBDTKH410`(IN `MaHK` CHAR(10), IN `MaSV` CHAR(10))
 -- BEGIN
@@ -143,7 +143,6 @@ DELIMITER ;
 -- UPDATE diem as d
 -- SET d.DiemTKQT = (d.DiemCCan + d.DiemHS1 + 2*d.DiemHS2 + d.DiemTH)/5
 -- WHERE d.MaD IN (SELECT TRIM(vals) FROM temp_string);
-
 -- END$$
 -- DELIMITER ;
 
